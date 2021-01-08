@@ -4,7 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class LinkedListTest {
     @Test
-    public void LinkedListTest1() {
+    public void LinkedListTestAdd1() {
+        //blank
+    }
+    @Test
+    public void LinkedListTestAdd2() {
         //blank
     }
 }
