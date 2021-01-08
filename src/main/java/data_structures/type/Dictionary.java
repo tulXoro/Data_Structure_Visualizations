@@ -1,4 +1,4 @@
-package data_structures.type;
+package main.java.data_structures.type;
 
 public interface Dictionary<K, V> {
     int size();

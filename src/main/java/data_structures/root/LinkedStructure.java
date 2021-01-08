@@ -1,4 +1,4 @@
-package data_structures.root;
+package main.java.data_structures.root;
 
 /**
  * Represents the root of all data structures with a linked
