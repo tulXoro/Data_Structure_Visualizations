@@ -6,7 +6,7 @@ package main.java.data_structures.root;
  * @param <T> type of data that should be stored
  */
 public abstract class LinkedStructure<T> {
-    private int size;
+    protected int size;
     protected Node head;
 
     /**
@@ -27,11 +27,17 @@ public abstract class LinkedStructure<T> {
     public abstract void add(T data);
 
     /**
+     * Removes a value from the linked structure
+     * @return value that was removed
+     */
+    public abstract T remove();
+
+    /**
      * Inner Class Node representing an object in linked structure
      */
     protected class Node {
-        protected T data;
-        protected Node next;
+        public T data;
+        public Node next;
 
         public Node(T data, Node next) {
             this.data = data;

@@ -14,5 +14,10 @@ public abstract class ArrayStructure<T> {
     }
 
     public int size() { return size; }
+
+    public void at(int index) {
+
+    }
+
     protected abstract void setSize(int size);
 }
