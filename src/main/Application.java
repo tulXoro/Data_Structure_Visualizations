@@ -1,3 +1,5 @@
+package main;
+
 public class Application {
 
     public final String title = "Data Structures Visualized";

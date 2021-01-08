@@ -1,3 +1,7 @@
+package main;
+
+import main.Application;
+
 import java.awt.Canvas;
 import java.awt.Dimension;
 
