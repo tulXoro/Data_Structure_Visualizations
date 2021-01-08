@@ -9,7 +9,7 @@ public abstract class ArrayStructure<T> {
     private Object[] array;
 
     public ArrayStructure() {
-        size = 5;
+        size = 3;
         array = new Object[size];
     }
 

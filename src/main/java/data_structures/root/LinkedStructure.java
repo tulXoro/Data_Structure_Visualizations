@@ -26,6 +26,9 @@ public abstract class LinkedStructure<T> {
      */
     public abstract void add(T data);
 
+    /**
+     * Inner Class Node representing an object in linked structure
+     */
     protected class Node {
         protected T data;
         protected Node next;
