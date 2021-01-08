@@ -7,7 +7,7 @@ package data_structures.root;
  */
 public abstract class LinkedStructure<T> {
     private int size;
-    private Node<T> head;
+    protected Node head;
 
     /**
      * Zero Arg Constructor
@@ -27,10 +27,10 @@ public abstract class LinkedStructure<T> {
     public abstract void add(T data);
 
     protected class Node<T> {
-        private T data;
-        private Node<T> next;
+        protected T data;
+        protected Node<T> next;
 
-        private Node(T data, Node<T> next) {
+        public Node(T data, Node<T> next) {
             this.data = data;
             this.next = next;
         }
