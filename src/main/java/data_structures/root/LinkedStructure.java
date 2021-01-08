@@ -26,11 +26,11 @@ public abstract class LinkedStructure<T> {
      */
     public abstract void add(T data);
 
-    protected class Node<T> {
+    protected class Node {
         protected T data;
-        protected Node<T> next;
+        protected Node next;
 
-        public Node(T data, Node<T> next) {
+        public Node(T data, Node next) {
             this.data = data;
             this.next = next;
         }
