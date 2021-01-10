@@ -2,6 +2,8 @@ package main.java;
 
 public class Application {
 
+    private State state = State.MENU;
+
     public final String title = "Data Structures Visualized";
     public static final int WIDTH = 640, HEIGHT = WIDTH/12 * 9; //used for pop out window
 
