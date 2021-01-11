@@ -1,4 +1,4 @@
-package main.java.data_structures.root;
+package main.java.data_structure.root;
 
 /**
  * Represents a dictionary

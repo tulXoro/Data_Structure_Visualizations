@@ -1,4 +1,4 @@
-package main.java.data_structures.root;
+package main.java.data_structure.root;
 
 /**
  * Represents root of all data structures with an array implementation

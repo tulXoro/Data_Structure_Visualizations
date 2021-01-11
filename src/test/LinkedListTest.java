@@ -1,4 +1,4 @@
-import main.java.data_structures.structure.LinkedList;
+import main.java.data_structure.structure.LinkedList;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

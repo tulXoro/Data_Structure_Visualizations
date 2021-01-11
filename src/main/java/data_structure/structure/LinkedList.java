@@ -1,6 +1,6 @@
-package main.java.data_structures.structure;
+package main.java.data_structure.structure;
 
-import main.java.data_structures.root.LinkedStructure;
+import main.java.data_structure.root.LinkedStructure;
 
 /**
  * Represents an ordinary Linked List
