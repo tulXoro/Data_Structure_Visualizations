@@ -2,14 +2,11 @@ package main.java;
 
 import main.java.screen.MenuScreen;
 import main.java.screen.Screen;
+import main.java.screen.State;
 
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.awt.image.BufferStrategy;
 import java.io.IOException;
-import java.awt.event.KeyEvent;
-import java.nio.Buffer;
 import java.util.HashMap;
 
 public class Application extends Canvas implements Runnable {

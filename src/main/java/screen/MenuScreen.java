@@ -1,7 +1,7 @@
 package main.java.screen;
 
 import main.java.Application;
-import main.java.BufferedImageLoader;
+import main.java.util.BufferedImageLoader;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
