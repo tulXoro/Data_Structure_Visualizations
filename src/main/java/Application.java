@@ -24,6 +24,9 @@ public class Application extends Canvas implements Runnable{
         image = loader.loadImage("../res/image/test.png");//throws exception if directory not found
     }
 
+    /*
+        Allows the program to run and render buffered images on the screen
+     */
     public synchronized void start(){
         if(isRunning) return;
         thread = new Thread(this);
@@ -40,9 +43,8 @@ public class Application extends Canvas implements Runnable{
         }isRunning = false;
     }
 
-    //GAMELOOP
+    // GAMELOOP (don't worry about it)
     public void run(){
-        //when directory not found
         try {
             init();
         } catch (IOException e) {
@@ -70,8 +72,10 @@ public class Application extends Canvas implements Runnable{
         stop();
     }
 
+    // Might delete, depends
     private void tick(){ }
 
+    // Renders buffered images
     private void render() {
         BufferStrategy bs = this.getBufferStrategy();
         if(bs == null){
@@ -81,7 +85,7 @@ public class Application extends Canvas implements Runnable{
 
         Graphics g = ((BufferStrategy) bs).getDrawGraphics();
 
-        //background
+        // background
         g.setColor(Color.black);
         g.fillRect(0, 0, WIDTH, HEIGHT);
 
