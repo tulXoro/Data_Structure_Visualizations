@@ -54,6 +54,7 @@ public class LinkedListTest {
         list.add("Time for breakfast");
         list.add(1, "Sheep"); // should add "Sheep" to index 1 and shift all other entries to the left
         assertEquals("Sheep", list.at(1));
+        assertEquals("Time for breakfast", list.at(2));
     }
 
     @Test

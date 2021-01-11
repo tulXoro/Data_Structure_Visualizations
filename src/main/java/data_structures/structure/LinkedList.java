@@ -43,7 +43,8 @@ public class LinkedList<T> extends LinkedStructure<T> {
         while(temp++<index-1) {
             current=current.next;
         }
-        current.next = new Node(data, current.next.next);
+        current.next = new Node(data, current.next);
+        size++;
 
     }
 
