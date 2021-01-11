@@ -36,15 +36,15 @@ public class LinkedListTest {
     @Test // tests modification of list
     public void LLTRemove() {
         LinkedList<String> list = new LinkedList<>();
-        list.add("We're no strangers to love"); //0
-        list.add("You know the rules and so do I"); //1
-        list.add("A full commitment's what I'm thinking of"); //2
-        list.add("You won't get this from any other guy"); //3
+        list.add("We're no strangers to love"); // 0
+        list.add("You know the rules and so do I"); // 1
+        list.add("A full commitment's what I'm thinking of"); // 2
+        list.add("You won't get this from any other guy"); // 3
         list.remove(2);
-        assertEquals("We're no strangers to love", list.at(0)); //pass
-        assertNotEquals("You know the rules and so do I", list.at(1)); //fail
-        assertEquals("A full commitment's what I'm thinking of", list.at(1)); //pass
-        assertEquals("You won't get this from any other guy", list.at(2)); //pass
+        assertEquals("We're no strangers to love", list.at(0)); // pass
+        assertNotEquals("You know the rules and so do I", list.at(1)); // fail
+        assertEquals("A full commitment's what I'm thinking of", list.at(1)); // pass
+        assertEquals("You won't get this from any other guy", list.at(2)); // pass
     }
 
     @Test // way to add elements to a specific index
