@@ -30,7 +30,7 @@ public class LinkedListTest {
         assertEquals(4234, list.at(1));
         assertEquals(-864, list.at(2));
         assertEquals(734, list.at(3));
-        //assertEquals(95, list.at(4));
+        assertEquals(95, list.at(4));
     }
 
     @Test
@@ -42,7 +42,7 @@ public class LinkedListTest {
         list.add("You won't get this from any other guy"); //3
         list.remove(2);
         assertEquals("We're no strangers to love", list.at(0)); //pass
-        //assertEquals("You know the rules and so do I", list.at(1)); //fail
+        assertNotEquals("You know the rules and so do I", list.at(1)); //fail
         assertEquals("A full commitment's what I'm thinking of", list.at(1)); //pass
         assertEquals("You won't get this from any other guy", list.at(2)); //pass
     }
