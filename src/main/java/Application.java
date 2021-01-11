@@ -11,16 +11,17 @@ import java.util.HashMap;
 
 public class Application extends Canvas implements Runnable {
 
-    private State state = State.MENU;
-
     public final String title = "Data Structures Visualized";
-    public static final int WIDTH = 640, HEIGHT = WIDTH/12 * 9; //used for pop out window
+    public static final int WIDTH = 640, HEIGHT = WIDTH/12 * 9;
 
-    private boolean isRunning = false;
     private Thread thread;
 
     private HashMap<State, Screen> screens;
 
+    private boolean isRunning = false;
+    private State state = State.MENU;
+
+    // Initializes the screen and images
     public void init() throws IOException {
         screens = new HashMap<>();
         screens.put(State.MENU, new MenuScreen());
@@ -46,10 +47,9 @@ public class Application extends Canvas implements Runnable {
     }
 
     /*
-        ----------------------------- MOUSE INTERACTIONS -----------------------------
+        ----------------------------- ESSENTIALS -----------------------------
      */
 
-    // (don't worry about it)
     public void run(){
         try {
             init();
@@ -99,6 +99,7 @@ public class Application extends Canvas implements Runnable {
         bs.show();
     }
 
+    // launches a window
     public Application() {
         new Window(WIDTH,HEIGHT,title,this);
     }
@@ -107,5 +108,8 @@ public class Application extends Canvas implements Runnable {
         new Application();
     }
 
+    /*
+        ----------------------------- GETTERS/SETTERS -----------------------------
+     */
 
 }
