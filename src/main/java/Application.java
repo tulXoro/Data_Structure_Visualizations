@@ -85,6 +85,8 @@ public class Application extends Canvas implements Runnable{
         g.setColor(Color.black);
         g.fillRect(0, 0, WIDTH, HEIGHT);
 
+        g.drawImage(image, 0, 0, 32, 32,null);
+
         g.dispose();
         bs.show();
     }
