@@ -26,6 +26,28 @@ public class LinkedList<T> extends LinkedStructure<T> {
     }
 
     /**
+     * Add an element at a specific index
+     * @param index to add a value
+     * @param data value to be added
+     * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index > size())
+     */
+    public void add(int index, T data) throws IndexOutOfBoundsException{
+        if(index<0 || index>size) throw new IndexOutOfBoundsException();
+        int temp = 0;
+
+        if(index==0) {
+            head = new Node(data, head);
+            return;
+        }
+        Node current = head;
+        while(temp++<index-1) {
+            current=current.next;
+        }
+        current.next = new Node(data, current.next.next);
+
+    }
+
+    /**
      * Grabs the object corresponding to it's index
      * @param index the index of a value in the linked list
      * @return the value at the linked list
