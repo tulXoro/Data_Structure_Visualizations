@@ -3,23 +3,23 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LinkedListTest {
-    @Test
-    public void LLTAdd1() { //adds one string to list
+    @Test // adds one string to list
+    public void LLTAdd1() {
         LinkedList<String> list = new LinkedList<>();
         list.add("Test");
         assertEquals("Test", list.at(0));
     }
 
-    @Test
-    public void LLTAdd2() { //adds multiple elements
+    @Test // adds multiple elements
+    public void LLTAdd2() {
         LinkedList<String> list = new LinkedList<>();
         list.add("Test");
         list.add("Foo");
         assertEquals("Foo", list.at(1));
     }
 
-    @Test
-    public void LLTAdd3() { //tests integers, positive and negative
+    @Test // tests integers, positive and negative
+    public void LLTAdd3() {
         LinkedList<Integer> list = new LinkedList<>();
         list.add(134);
         list.add(4234);
@@ -33,8 +33,8 @@ public class LinkedListTest {
         assertEquals(95, list.at(4));
     }
 
-    @Test
-    public void LLTRemove() { //tests modification of list
+    @Test // tests modification of list
+    public void LLTRemove() {
         LinkedList<String> list = new LinkedList<>();
         list.add("We're no strangers to love"); //0
         list.add("You know the rules and so do I"); //1
@@ -47,8 +47,8 @@ public class LinkedListTest {
         assertEquals("You won't get this from any other guy", list.at(2)); //pass
     }
 
-    @Test
-    public void LLTNewAdd() { //way to add elements to a specific index
+    @Test // way to add elements to a specific index
+    public void LLTNewAdd() {
         LinkedList<String> list = new LinkedList<>();
         list.add("Wake up");
         list.add("Time for breakfast");
