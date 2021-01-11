@@ -1,12 +1,19 @@
 package main.java;
 
+import main.java.screen.MenuScreen;
+import main.java.screen.Screen;
+
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.awt.event.KeyEvent;
+import java.nio.Buffer;
+import java.util.HashMap;
 
-public class Application extends Canvas implements Runnable{
+public class Application extends Canvas implements Runnable {
 
     private State state = State.MENU;
 
@@ -16,12 +23,11 @@ public class Application extends Canvas implements Runnable{
     private boolean isRunning = false;
     private Thread thread;
 
-    private BufferedImage image;
+    private HashMap<State, Screen> screens;
 
     public void init() throws IOException {
-        BufferedImageLoader loader = new BufferedImageLoader();
-
-        image = loader.loadImage("../res/image/test.png");//throws exception if directory not found
+        screens = new HashMap<>();
+        screens.put(State.MENU, new MenuScreen());
     }
 
     /*
@@ -43,7 +49,11 @@ public class Application extends Canvas implements Runnable{
         }isRunning = false;
     }
 
-    // GAMELOOP (don't worry about it)
+    /*
+        ----------------------------- MOUSE INTERACTIONS -----------------------------
+     */
+
+    // (don't worry about it)
     public void run(){
         try {
             init();
@@ -73,7 +83,9 @@ public class Application extends Canvas implements Runnable{
     }
 
     // Might delete, depends
-    private void tick(){ }
+    private void tick(){
+        screens.get(state).tick();
+    }
 
     // Renders buffered images
     private void render() {
@@ -85,11 +97,7 @@ public class Application extends Canvas implements Runnable{
 
         Graphics g = ((BufferStrategy) bs).getDrawGraphics();
 
-        // background
-        g.setColor(Color.black);
-        g.fillRect(0, 0, WIDTH, HEIGHT);
-
-        g.drawImage(image, 0, 0, 32, 32,null);
+        screens.get(state).render(g);
 
         g.dispose();
         bs.show();
@@ -102,4 +110,6 @@ public class Application extends Canvas implements Runnable{
     public static void main(String[] args) {
         new Application();
     }
+
+
 }
