@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class MenuScreen implements Screen {
+public class MenuScreen implements Screen{
     private BufferedImage image;
 
     public MenuScreen() throws IOException {
