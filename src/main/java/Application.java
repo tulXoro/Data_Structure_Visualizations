@@ -91,7 +91,7 @@ public class Application extends Canvas implements Runnable {
             return;
         }
 
-        Graphics g = ((BufferStrategy) bs).getDrawGraphics();
+        Graphics g = bs.getDrawGraphics();
 
         screens.get(state).render(g);
 
