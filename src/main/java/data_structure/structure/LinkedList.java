@@ -87,18 +87,24 @@ public class LinkedList<T> extends LinkedStructure<T> {
         if(index>=size) throw new IndexOutOfBoundsException();
         if(index==0) return remove();
 
-        size--;
         Node current = head;
 
-        int count = 1;
-        while(true) {
-            if(count==index) {
-                Node temp = current.next;
-                current.next = current.next.next;
-                return temp.data;
-            }
-            count++;
+        if(index==size-1) {
+            while(current.next!=null) current = current.next;
+            Node temp = current;
+            size--;
+            return temp.data;
         }
+
+        // set current to node at index-1
+        // next node is node to be removed
+        int count = 0;
+        while(count++<index-1) current=current.next;
+        // gets a temporary node as the index to be removed
+        Node temp = current.next;
+        current.next = current.next.next; // current.next points to node that is after node to be deleted
+        size--;
+        return temp.data;
     }
 
 }
