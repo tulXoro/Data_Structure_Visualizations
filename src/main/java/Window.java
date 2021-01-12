@@ -1,16 +1,14 @@
 package main.java;
 
-import main.java.Application;
-
 import java.awt.Canvas;
 import java.awt.Dimension;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
+import java.io.Serial;
 
 import javax.swing.JFrame;
 
 public class Window extends Canvas{
 
+    @Serial
     private static final long serialVersionUID = 6596273530124848110L;
 
     public Window(int width, int height, String title, Application app) {
