@@ -86,9 +86,10 @@ public class LinkedList<T> extends LinkedStructure<T> {
     public T remove(int index) throws IndexOutOfBoundsException{
         if(index>=size) throw new IndexOutOfBoundsException();
 
+        size--;
         Node current = head;
         if(index==0) {
-            head = null;
+            head = head.next;
             return current.data;
         }
 
@@ -97,7 +98,6 @@ public class LinkedList<T> extends LinkedStructure<T> {
             if(count==index) {
                 Node temp = current.next;
                 current.next = current.next.next;
-                size--;
                 return temp.data;
             }
             count++;
