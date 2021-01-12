@@ -9,20 +9,19 @@ import main.java.data_structure.root.LinkedStructure;
 public class LinkedList<T> extends LinkedStructure<T> {
 
     /**
-     * Adds a new node to the list
+     * Adds a new node to the list (elements are added to the end
      * @param data to be added
      */
     public void add(T data) {
-        if(size==0) {
-            head = new Node(data, head);
-            size++;
+        size++;
+        if(head==null) {
+            head = new Node(data, null);
             return;
         }
 
         Node current = head;
         while(current.next!=null) current = current.next;
         current.next = new Node(data, null);
-        size++;
     }
 
     /**
@@ -33,8 +32,10 @@ public class LinkedList<T> extends LinkedStructure<T> {
      */
     public void add(int index, T data) throws IndexOutOfBoundsException{
         if(index<0 || index>size) throw new IndexOutOfBoundsException();
+        size++;
         int temp = 0;
 
+        // if add to the start, increase the size then move on
         if(index==0) {
             head = new Node(data, head);
             return;
@@ -44,8 +45,6 @@ public class LinkedList<T> extends LinkedStructure<T> {
             current=current.next;
         }
         current.next = new Node(data, current.next);
-        size++;
-
     }
 
     /**

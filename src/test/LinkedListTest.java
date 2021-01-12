@@ -83,7 +83,7 @@ public class LinkedListTest {
         assertEquals(2.71828, list.at(0)); // 2.17 takes 3.14's previous index, 0
         assertEquals(7.3890561, list.at(1)); // 7.38 moves 3.14 to index 2
         assertEquals(3.1415, list.at(2)); // final position of 3.14
-        //assertEquals(1.57079633, list.at(3)); //1.57 is added on last, placing it in index 3
+        assertEquals(1.57079633, list.at(3)); // 1.57 is added on last, placing it in index 3
     }
 
     @Test
