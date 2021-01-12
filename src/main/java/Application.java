@@ -6,6 +6,7 @@ import main.java.screen.State;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -79,9 +80,7 @@ public class Application extends Canvas implements Runnable {
     }
 
     // Might delete, depends
-    private void tick(){
-        screens.get(state).tick();
-    }
+    private void tick(){ }
 
     // Renders buffered images
     private void render() {
