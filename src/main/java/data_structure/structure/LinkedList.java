@@ -85,13 +85,10 @@ public class LinkedList<T> extends LinkedStructure<T> {
      */
     public T remove(int index) throws IndexOutOfBoundsException{
         if(index>=size) throw new IndexOutOfBoundsException();
+        if(index==0) remove();
 
         size--;
         Node current = head;
-        if(index==0) {
-            head = head.next;
-            return current.data;
-        }
 
         int count = 1;
         while(true) {
