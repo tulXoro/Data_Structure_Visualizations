@@ -73,7 +73,7 @@ public class LinkedListTest {
         assertEquals("Time for breakfast", list.at(2));
     }
 
-    // tests linked list with doubles using all modifications previously tested
+    // tests linked list with doubles using all modifications previously used and tested
     @Test
     public void LLTRemove2() {
         LinkedList<Double> list = new LinkedList<>();
@@ -87,16 +87,18 @@ public class LinkedListTest {
             System.out.println(list.at(i));
         }
         assertNotEquals(3.1415, list.at(0)); // 3.14 moves to index 1
-        assertEquals(2.71828, list.at(0)); // 2.17 takes 3.14's previous index, 0
-        assertEquals(7.3890561, list.at(1)); // 7.38 moves 3.14 to index 2
         assertEquals(3.1415, list.at(2)); // final position of 3.14
         assertEquals(1.57079633, list.at(3)); // 1.57 is added on last, placing it in index 3
-        System.out.println("Removed element at index 3: " + list.remove(3));
-        System.out.println("Removed element at index 0: " + list.remove(0));
+        //System.out.println("Removed element at index 3: " + list.remove(3));
+        System.out.println("Removed element at index 2: " + list.remove(2));
+        System.out.println("Removed element at index 1: " + list.remove(1));
+        //System.out.println("Removed element at index 0: " + list.remove(0));
         System.out.println("Length of LinkedList after removing elements: " + list.size());
         for(i = 0; i< list.size(); i++) {
             System.out.println(list.at(i));
         }
+        assertEquals(2.71828, list.at(0));
+        assertEquals(1.57079633, list.at(1));
     }
 
 
