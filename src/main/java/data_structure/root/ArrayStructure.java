@@ -6,10 +6,10 @@ package main.java.data_structure.root;
  */
 public abstract class ArrayStructure<T> {
     private int size;
-    private Object[] array;
+    protected Object[] array;
 
     public ArrayStructure() {
-        size = 3;
+        size = 5;
         array = new Object[size];
     }
 
