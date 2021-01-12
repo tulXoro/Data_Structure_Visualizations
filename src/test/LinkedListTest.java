@@ -74,7 +74,11 @@ public class LinkedListTest {
         list.add(0, 2.71828); // takes index 0
         list.add(1, 7.3890561); // takes index 1
         list.add(1.57079633); // takes index 3
+        list.add(4.1785);
         System.out.println("Length of LinkedList after adding elements: " + list.size());
+        for(int i = 0; i< list.size(); i++) { // where the hey did 1.57 go???
+            System.out.println(list.at(i));
+        }
         assertNotEquals(3.1415, list.at(0)); // 3.14 moves to index 1
         assertEquals(2.71828, list.at(0)); // 2.17 takes 3.14's previous index, 0
         assertEquals(7.3890561, list.at(1)); // 7.38 moves 3.14 to index 2
