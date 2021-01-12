@@ -49,7 +49,7 @@ public class LinkedList<T> extends LinkedStructure<T> {
     }
 
     /**
-     * Grabs the object corresponding to it's index
+     * Grabs the object corresponding to its index
      * @param index the index of a value in the linked list
      * @return the value at the linked list
      * @throws IndexOutOfBoundsException if index does not exist in the list
