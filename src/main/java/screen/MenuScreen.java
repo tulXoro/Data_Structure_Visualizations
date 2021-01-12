@@ -5,7 +5,6 @@ import main.java.util.BufferedImageLoader;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 public class MenuScreen implements Screen{

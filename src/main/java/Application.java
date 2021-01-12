@@ -6,7 +6,6 @@ import main.java.screen.State;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.HashMap;
 
