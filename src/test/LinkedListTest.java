@@ -41,13 +41,20 @@ public class LinkedListTest {
     @Test
     public void LLTRemove() {
         LinkedList<String> list = new LinkedList<>();
+        int i;
         list.add("We're no strangers to love"); // 0
         list.add("You know the rules and so do I"); // 1
         list.add("A full commitment's what I'm thinking of"); // 2
         list.add("You won't get this from any other guy"); // 3
         System.out.println("Length of LinkedList before modifying elements: " + list.size());
         list.remove(2);
+        for(i = 0; i< list.size(); i++) {
+            System.out.println(list.at(i));
+        }
         System.out.println("Length of LinkedList after modifying elements: " + list.size());
+        for(i = 0; i< list.size(); i++) {
+            System.out.println(list.at(i));
+        }
         assertEquals("We're no strangers to love", list.at(0)); // pass
         assertNotEquals("You know the rules and so do I", list.at(1)); // fail
         assertEquals("A full commitment's what I'm thinking of", list.at(1)); // pass
@@ -70,13 +77,13 @@ public class LinkedListTest {
     @Test
     public void LLTRemove2() {
         LinkedList<Double> list = new LinkedList<>();
+        int i;
         list.add(3.1415); // starting element, ends up in index 2
         list.add(0, 2.71828); // takes index 0
         list.add(1, 7.3890561); // takes index 1
         list.add(1.57079633); // takes index 3
-        list.add(4.1785);
         System.out.println("Length of LinkedList after adding elements: " + list.size());
-        for(int i = 0; i< list.size(); i++) { // where the hey did 1.57 go???
+        for(i = 0; i< list.size(); i++) {
             System.out.println(list.at(i));
         }
         assertNotEquals(3.1415, list.at(0)); // 3.14 moves to index 1
@@ -84,7 +91,15 @@ public class LinkedListTest {
         assertEquals(7.3890561, list.at(1)); // 7.38 moves 3.14 to index 2
         assertEquals(3.1415, list.at(2)); // final position of 3.14
         assertEquals(1.57079633, list.at(3)); // 1.57 is added on last, placing it in index 3
+        System.out.println("Removed element at index 3: " + list.remove(3));
+        System.out.println("Removed element at index 0: " + list.remove(0));
+        System.out.println("Length of LinkedList after removing elements: " + list.size());
+        for(i = 0; i< list.size(); i++) {
+            System.out.println(list.at(i));
+        }
     }
+
+
 
     @Test
     public void LLTAddException1() {
