@@ -4,25 +4,22 @@ import main.java.data_structure.root.ArrayStructure;
 
 public class Array<T> extends ArrayStructure<T> {
     public Array(int size) {
-        setSize(size);
+        size = this.size;
         array = new Object[size];
     }
 
     @Override
-    public T add(T data) throws IndexOutOfBoundsException {
-        T temp = (T) array[getCapacity()-1];
-        array[getCapacity()-1]= data;
-        if(getCapacity()<size()) setCapacity(getCapacity()+1);
-        return temp;
+    public T add(T data) throws IndexOutOfBoundsException, IllegalAccessException {
+        throw new IllegalAccessException("This method is not implemented in class Array");
     }
 
     @Override
-    public T remove() throws IndexOutOfBoundsException {
-        return null;
+    public T remove() throws IndexOutOfBoundsException, IllegalAccessException {
+        throw new IllegalAccessException("This method is not implemented in class Array");
     }
 
     @Override
-    protected void setSize(int size) {
-
+    protected void setSize(int size) throws IllegalAccessException {
+        throw new IllegalAccessException("This method is not implemented in class Array");
     }
 }
