@@ -6,9 +6,9 @@ package main.java.data_structure.root;
  */
 public abstract class ArrayStructure<T> {
     // The length of the array
-    private int size;
+    protected int size;
     // Number of non-null entries of the array
-    private int capacity = 1;
+    protected int capacity = 1;
     // Internal array that is used
     protected Object[] array;
 
@@ -83,18 +83,18 @@ public abstract class ArrayStructure<T> {
      * @throws IndexOutOfBoundsException if index is not in range (index<0 || index>=size)
      * @return previous data at that index
      */
-    public abstract T add(T data) throws IndexOutOfBoundsException;
+    public abstract T add(T data) throws IndexOutOfBoundsException, IllegalAccessException;
 
     /**
      * Removes an object from the array
      * @return the value at the index of specified array
      * @throws IndexOutOfBoundsException if index is not in range (index < 0 || index >= size)
      */
-    public abstract T remove() throws IndexOutOfBoundsException;
+    public abstract T remove() throws IndexOutOfBoundsException, IllegalAccessException;
 
     /**
      * Set the size of the array
      * @param size the size of the array
      */
-    protected abstract void setSize(int size);
+    protected abstract void setSize(int size) throws IllegalAccessException;
 }
