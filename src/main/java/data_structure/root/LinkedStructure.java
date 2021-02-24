@@ -1,5 +1,6 @@
 package main.java.data_structure.root;
 
+// TODO: Add an iterator for Linked Structure?
 /**
  * Represents the root of all data structures with a linked
  * implementation
@@ -12,7 +13,9 @@ public abstract class LinkedStructure<T> {
     /**
      * Zero Arg Constructor
      */
-    public LinkedStructure() {}
+    public LinkedStructure() {
+        size = 0;
+    }
 
     /**
      * Returns the size of the linked structure
