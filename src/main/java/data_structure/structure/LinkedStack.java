@@ -30,4 +30,9 @@ public class LinkedStack<T> extends LinkedStructure<T> {
         return temp.data;
     }
 
+    public T peek() {
+        Node temp = head;
+        return temp.data;
+    }
+
 }
